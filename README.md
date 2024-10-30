@@ -1,16 +1,14 @@
-![image](https://github.com/user-attachments/assets/311e9b3a-c625-4f5c-b0f5-4231f7175cd1)# Example นี้จะแสดงวิธีการกระพริบ LED โดยใช้ GPIO driver หรือใช้ไลบรารี led_strip สำหรับ LED ที่สามารถกำหนดได้ (addressable LED) เช่น WS2812 โดยที่ไลบรารี led_strip จะถูกติดตั้งผ่าน component manager
-เริ่มจากการเลือกใน Show Example
+# Example นี้จะแสดงวิธีการกระพริบ LED โดยใช้ GPIO driver หรือใช้ไลบรารี led_strip สำหรับ LED ที่สามารถกำหนดได้ (addressable LED) เช่น WS2812 โดยที่ไลบรารี led_strip จะถูกติดตั้งผ่าน component manager
 
+เริ่มจากการเลือกใน Show Example
 ![image](https://github.com/user-attachments/assets/a0565f2f-42ad-4f21-99a3-61b77131a662)
 
 กด Create project แล้วจะพบหน้าต่างนี้
-
 ![image](https://github.com/user-attachments/assets/ed5035ab-e78f-4858-9ba2-685b17b1bdc0)
-ให้เราเลือก port ให้ตรงกับบอร์ด esp เสร็จแล้วให้ Build และ Flash ลงบอร์ด เมื่อ Flash เสร็จแล้วจะพบข้อความประมาณนี้ดังนี้
 
+ให้เราเลือก port ให้ตรงกับบอร์ด esp เสร็จแล้วให้ Build และ Flash ลงบอร์ด เมื่อ Flash เสร็จแล้วจะพบข้อความประมาณนี้ดังนี้
 ![image](https://github.com/user-attachments/assets/7c40c32f-16f0-4d17-9cc9-f5faff3a5817)
-![image](https://github.com/user-attachments/assets/e6c2f850-492f-408b-9eca-6c264f0643be)
-![image](https://github.com/user-attachments/assets/3801f5ff-8584-4d15-aef0-4ea1de84e3d4)
+
 
 ต่อไปจะกำหนดขาBLINK_GPIO เป็น 23เพื่อสั่งให้ledติดดับ
 ```
@@ -83,3 +81,8 @@ void app_main(void) {
     }
 }
 ```
+ผลลัพธ์ไฟจะติดและดับตามสถานะใน
+
+![image](https://github.com/user-attachments/assets/7c40c32f-16f0-4d17-9cc9-f5faff3a5817)
+![image](https://github.com/user-attachments/assets/e6c2f850-492f-408b-9eca-6c264f0643be)
+![image](https://github.com/user-attachments/assets/3801f5ff-8584-4d15-aef0-4ea1de84e3d4)
